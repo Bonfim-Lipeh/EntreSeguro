@@ -94,6 +94,7 @@ Algumas hipóteses que serão investigadas:
 
 ## 🛠️ Tecnologias
 
+<<<<<<< HEAD
 * **Frontend:** React, TypeScript, Vite, Tailwind CSS e shadcn/ui;
 * **Backend:** Java 21 e Spring Boot 3 (POO, Spring Data JPA, Spring Security);
 * **Banco de dados:** MySQL 8.4 com migrações Flyway;
@@ -112,6 +113,15 @@ npm run dev
 
 Assim, o painel roda em **modo demonstração**, com dados 100% fictícios. Para usá-lo com a API Java real
 (MySQL + JWT), use `npm run dev:http` e siga [`docs/INTEGRACAO.md`](docs/INTEGRACAO.md).
+=======
+As tecnologias serão definidas durante a evolução do projeto. Entre as possibilidades estão:
+
+* **Frontend:** HTML, CSS, JavaScript ou framework web;
+* **Backend:** Java / Spring Boot;
+* **Banco de dados:** PostgreSQL ou Firebase;
+* **Autenticação:** sistema de login e controle de acesso;
+* **Versionamento:** Git e GitHub.
+>>>>>>> 40e9dccddba1b85a3c8061167fde6a16f66d4106
 
 ## 📚 Contexto acadêmico
 
