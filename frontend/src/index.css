@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Paleta institucional EntradaSegura
+ *   marinho-900 #081C2F · marinho-800 #102A43 · marinho-700 #243B53
+ *   dourado #D4AF37 (somente destaque) · off-white #F8F5E6
+ */
+:root {
+  --radius: 0.625rem;
+
+  --background: #f4f2ea;
+  --foreground: #0b1e30;
+  --card: #ffffff;
+  --card-foreground: #0b1e30;
+  --popover: #ffffff;
+  --popover-foreground: #0b1e30;
+  --primary: #102a43;
+  --primary-foreground: #f8f5e6;
+  --secondary: #e9e6da;
+  --secondary-foreground: #102a43;
+  --muted: #efece2;
+  --muted-foreground: #52606d;
+  --accent: #e9e6da;
+  --accent-foreground: #102a43;
+  --destructive: #b42318;
+  --destructive-foreground: #ffffff;
+  --border: #dcd8ca;
+  --input: #cfcabb;
+  --ring: #d4af37;
+
+  --navy-900: #081c2f;
+  --navy-800: #102a43;
+  --navy-700: #243b53;
+  --gold: #d4af37;
+  --offwhite: #f8f5e6;
+}
+
+@theme inline {
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-navy-700: var(--navy-700);
+  --color-gold: var(--gold);
+  --color-offwhite: var(--offwhite);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/60;
+  }
+  html,
+  body,
+  #root {
+    @apply h-full;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "tnum" 1, "cv11" 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

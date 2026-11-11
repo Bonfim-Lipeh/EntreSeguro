@@ -1,0 +1,5 @@
+entradasegura:
+  jwt:
+    secret: TestSecretKeyForJWT_1234567890ABCD
+    issuer: entradasegura-test
+    audience: entradasegura-portaria-test

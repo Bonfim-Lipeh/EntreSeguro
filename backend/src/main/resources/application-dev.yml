@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: ${DB_URL:jdbc:mysql://localhost:3306/entradasegura?createDatabaseIfNotExist=true&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC}
+    username: ${DB_USERNAME:entradasegura}
+    password: ${DB_PASSWORD:entradasegura}
+  jpa:
+    show-sql: true
+  flyway:
+    clean-disabled: false
+    # Somente em dev: inclui dados de demonstração fictícios (db/seed-dev)
+    locations: classpath:db/migration,classpath:db/seed-dev
+
+entradasegura:
+  jwt:
+    secret: ${JWT_SECRET:entradasegura-local-dev-secret-32chars}
+    issuer: ${JWT_ISSUER:entradasegura-local-dev}
+    audience: ${JWT_AUDIENCE:entradasegura-portaria-local}
+
+logging:
+  level:
+    org.springframework.web: INFO
+    org.hibernate.SQL: DEBUG
